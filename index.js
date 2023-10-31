@@ -19,7 +19,12 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+const surucuYasi = 33
+if (surucuYasi > 18){
+  console.log("true")
+}else {
+  console.log("false")
+}
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
 
@@ -31,6 +36,12 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+let birinciDeger = 3
+let ikinciDeger = 4
+if (birinciDeger < ikinciDeger) {
+birinciDeger = 5
+}
+console.log(birinciDeger)
 
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
@@ -42,7 +53,9 @@ Aşağıdakileri yap:
 
    İPUCU: Number metoduna bakabilirsin
 */
-
+const deger = "1999"
+const ceviri = Number(deger) 
+console.log(ceviri)
 /*
 Görev 1d - Çarpma
  
@@ -65,8 +78,9 @@ Aşağıdakileri yap:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(insanYasi) {
+  const kopeginYasi = insanYasi * 7
+  return kopeginYasi
 }
 
 /* Görev 3 */
@@ -84,13 +98,23 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar) {
-  /*buraya kodunu yazabilirsin*/
+  if (
+    (oyuncu === "Taş" && bilgisayar === "Makas") || 
+    (oyuncu === "Makas" && bilgisayar === "Kağıt") || 
+    (oyuncu === "Kağıt" && bilgisayar === "Taş")
+  ) {
+    return "Kazandın!";
+  } else if (oyuncu === bilgisayar) {
+    return "Beraberlik";
+  } else {
+    return "Kaybettin!";
+  }
 }
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
 Öncelikle aşağıdakileri yap:
-1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn: 
+1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn:
    function bilgisayarinSecimi() {
    
    }
@@ -103,6 +127,35 @@ function oyun(oyuncu, bilgisayar) {
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
 
+function bilgisayarinSecimi() {
+  const pcsecenekler = ["Taş" && "Kağıt" && "Makas"]
+  const secim = Math.random()
+  if (secim > 1/3) {
+    return "Taş"
+  } else if (secim < 2/3) {
+    return "Kağıt"
+  } else {
+    return "Makas"
+  } 
+  return secim 
+}
+
+function oyuncuSecimi() {
+  const oysecenekler = ["Taş" && "Kağıt" && "Makas"]
+  const osecim = Math.random()
+  if (osecim > 1/3) {
+    return "Taş"
+  } else if (osecim < 2/3) {
+    return "Kağıt"
+  } else {
+    return "Makas"
+  } 
+  return osecim 
+}
+
+
+
+
 /* Görev 4 : Metrik Dönüştürücü */
 
 //Görev 4a - Kilometreden Mil
@@ -113,8 +166,9 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(kmDeger) {
+  const milDeger = kmDeger * 0.621371 
+  return milDeger
 }
 
 //Görev 4b - Santimetreden Feet
@@ -127,8 +181,9 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yap:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(cmDeger) {
+  const feetDeger = cmDeger / 30.48
+  return feetDeger
 }
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
@@ -144,9 +199,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function cocukSarkisi() {
+  
 }
+
+
+
 
 /* Görev 6 : Not Hesaplayıcı */
 
