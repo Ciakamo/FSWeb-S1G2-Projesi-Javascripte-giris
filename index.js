@@ -200,8 +200,13 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi() {
-  
+const maymunSayisi = 5
+return maymunSayisi + " " +"küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!" 
 }
+for (let maymunSayisi = 5; maymunSayisi >= 1; maymunSayisi--) {
+  console.log(maymunSayisi + " " +"küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!")
+}
+
 
 
 
@@ -221,8 +226,19 @@ Aşağdakileri notHesapla fonksiyonunda yap.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function notHesapla() {
+  const sınavSonucu = 100
+if(sınavSonucu >= 90 && sınavSonucu <= 100){
+  return "A aldın"
+}else if(sınavSonucu >= 80 && sınavSonucu <= 89){
+  return "B aldın"
+}else if(sınavSonucu >= 70 && sınavSonucu <= 79){
+  return "C aldın"
+}else if(sınavSonucu >= 60 && sınavSonucu <= 69){
+  return "D aldın"
+}else{
+  return "F aldın"
+}
 }
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
